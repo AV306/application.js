@@ -6,7 +6,7 @@ const { Routes } = require('discord-api-types/v9');
 const { clientId, guildId, token } = require('./config.json');
 
 const commands = [
-	new SlashCommandBuilder().setName('whoami').setDescription('Check that the bot is working properly by returning your info.'),
+	new SlashCommandBuilder().setName('whoami').setDescription('Check that the bot is working correctly by displaying your info.'),
 	new SlashCommandBuilder().setName('psmp').setDescription('get Poco SMP server info'),
 	new SlashCommandBuilder().setName('boop').setDescription('Boop!')
 ].map(command => command.toJSON());
