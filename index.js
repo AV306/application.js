@@ -21,10 +21,14 @@ client.once('ready', () => {console.log("Ready!");}); // print "Ready!" once bot
 
 // on interact...
 client.on('interactionCreate', async interaction => {
+	// Log interaction
+	console.log('${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.');
+	
+	
+	
+	// Handle interation
 	if (!interaction.isCommand()) return; // if it's not a command, ignore
-  
 	const command = client.commands.get(interaction.commandName); // get the command from Collection
-  
 	if (!command) return; // ignore if its not a valid command
 	try {
 		await command.execute(interaction); // await execution of response
@@ -33,6 +37,7 @@ client.on('interactionCreate', async interaction => {
 		console.error(error);
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
     }
+	
 });
 
 
