@@ -1,2 +1,7 @@
 # secrets
 config.json
+
+# stupid things
+node_modules/
+node_v16.9.1-win-64/
+.vscode/
