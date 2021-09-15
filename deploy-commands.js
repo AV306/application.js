@@ -6,7 +6,8 @@ const { Routes } = require('discord-api-types/v9');
 const { clientId, guildId, token } = require('./config.json');
 
 const commands = [
-	new SlashCommandBuilder().setName('whoami').setDescription('Replies with pong!')
+	new SlashCommandBuilder().setName('whoami').setDescription('Check that the bot is working properly by returning your info.'),
+	new SlashCommandBuilder().setName('psmp').setDescription('get Poco SMP server info')
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '9' }).setToken(token);
