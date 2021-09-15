@@ -1,3 +1,9 @@
+/*
+* DEPRECATED
+*/
+
+
+
 // Run only after adding new commands with `node deploy-commands.js`
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
